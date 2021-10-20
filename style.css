@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+.parallax{
+    height: 100%;
+    width: 100%;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.child {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: inherit;
+    text-transform: uppercase;
+}
+.child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(./img.jpeg);
+    background-size: cover;
+    transform: translateZ(-1px) scale(2);
+}
+.child h1{
+    color: white;
+}
+.container {
+    position: relative;
+    padding: 20px;
+    color: grey;
+    background: black;
+    line-height: 40px;
+    text-align: justify;
+    font-weight: lighter;
+}
